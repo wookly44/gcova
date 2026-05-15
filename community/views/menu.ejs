@@ -1,0 +1,32 @@
+<%- include('header.ejs') %>
+    <main>
+        <section class="sub1_community_page">
+            <div class="subpage_repeat">
+                <div class="root">
+                    <div><a href="#"><img src="img/btn_icon_home.png" alt="home"></a></div>
+                    <span><img src="img/btn_icon_brec_arrow.png" alt="arrow"></span>
+                    <div><a href="#">메뉴안내</a></div>
+                    <span><img src="img/btn_icon_brec_arrow.png" alt="arrow"></span>
+                    <div><a href="#">메뉴소개</a></div>
+                </div>
+                <h1>MENU</h1>
+            </div>
+            <form method="POST" action="/menu" enctype ="multipart/form-data">
+                <input type="text" name="imgtit">        
+                <input type="file" name="fileName">        
+                <input type="submit" value="등록">
+            </form>
+            <table class="qna_table">
+                <thead>
+                    <tr class="table_center">
+                        <td>create_time</td>
+                        <td>images</td>
+                        <td>title</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+<%- include('footer.ejs') %>

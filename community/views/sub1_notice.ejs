@@ -1,0 +1,75 @@
+<%- include('header.ejs') %>
+<main>
+    <section class="sub1_community_page">
+        <div class="subpage_repeat">
+            <div class="root">
+                <div><a href="#"><img src="img/btn_icon_home.png" alt="home"></a></div>
+                <span><img src="img/btn_icon_brec_arrow.png" alt="arrow"></span>
+                <div><a href="#">커뮤니티</a></div>
+                <span><img src="img/btn_icon_brec_arrow.png" alt="arrow"></span>
+                <div><a href="#">문의하기</a></div>
+                <span><img src="img/btn_icon_brec_arrow.png" alt="arrow"></span>
+                <div><a href="#">문의받은질문</a></div>
+            </div>
+            <h1>COMMUNITY</h1>
+            <ul class="sub_community_nav">
+                <li><a href="sub1Noti">공지사항</a></li>
+                <li><a href="sub1Ques">문의하기</a></li>
+            </ul>
+            <ul class="sub_community_qna">
+                <li><a href="sub1Noti?page=1">문의 받은 질문</a></li>
+                <li>|<a href="sub1Ques">문의 접수</a></li>
+            </ul>
+        </div>
+        <p class="qna_txt">
+            <strong>지코바에 대해 궁금한 사항을 문의해 주세요. <br>최대한 빠른 시일 내에 친절하게 답변해 드리겠습니다.</strong> <br>
+            (토, 일, 공휴일 문의는 평일 운영시간 순차적으로 답변됩니다.)
+        </p>
+        <h1 class="qna_table_tit">공지사항</h1>
+        <table class="qna_table">
+            <thead>
+                <tr class="table_center">
+                    <td>번호</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                    <td>조회</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(i=(page*page_list)-page_list; i<(page * page_list); i++){
+                    if(i>leng){
+                        i++;
+                    }else{
+                        let row = rows[i]
+                %>
+                <tr>
+                    <td class="table_center"><%= i + 1 %></td>
+                    <td><a href="#"><%= row.title_notice %></a></td>
+                    <td class="table_center"><%= row.date_notice %></td>
+                    <td class="table_center"><%= row.date_notice %></td>
+                </tr>
+                <% } %>
+                <% } %>
+            </tbody>
+        </table>
+        <div class="table_pagination">
+            <%# 이전 페이지네이션 %>
+            <% let num = parseInt(page);
+                let val = (num<=1)?num=1:num-1; %>
+            <a href='sub1Noti?page=<%= val %>'>이전</a>
+            
+            <%# 하단 페이지네이션 %>
+            <% for(j=0; j<Math.ceil(rows.length/page_list); j++){ %>
+                <a href='sub1Noti?page=<%= j+1 %>'><%= j+1 %></a>
+            <% } %>
+
+            <%# 다음 페이지네이션 %>
+            <% let lastpage = Math.ceil(rows.length/page_list);
+                let val2 = (num>=lastpage)?num=lastpage:num+1; %>
+            <a href='sub1Noti?page=<%= val2 %>'>다음</a>
+        </div>
+        
+        </section>
+    </main>
+<%- include('footer.ejs') %>

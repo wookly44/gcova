@@ -1,0 +1,206 @@
+/* sub page repeat */
+section{
+    width: 100%;
+    padding: 0 200px;
+}
+.subpage_repeat{
+    margin-top: 70px;
+}
+.root{
+    display: flex;
+    gap: 10px;
+    opacity: 0.5;
+}
+.root>div>a{
+    font-size: 14px;
+    font-weight: 500;
+}
+.subpage_repeat>h1{
+    text-align: center;
+    font-size: 56px;
+    font-weight: 900;
+    color: #F05A21;
+    margin: 15px 0 30px 0;
+}
+.sub_community_nav{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.sub_community_nav>li{
+    width: 180px;
+    background-color: rgba(121, 121, 121, 0.03);
+    box-shadow: inset 0px 5px 10px 0 rgba(121, 121, 121, 0.03);
+    border-radius: 30px;
+}
+.sub_community_nav>li>a{
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 43px;
+}
+.sub_community_qna{
+    width: 300px;
+    display: flex;
+    box-shadow: 0px 2px 9.8px 0.2px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin: 40px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sub_community_qna>li{
+    width: 154px;
+    display: flex;
+    align-items: center;
+}
+.sub_community_qna>li>a{
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    font-size: 14px;
+    letter-spacing: -0.8px;
+}
+.qna_txt{
+    box-shadow: 0px 3px 10px 0.9px rgba(0, 0, 0, 0.03);
+    border-radius: 30px;
+    margin-bottom: 70px;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 42px 0 36px;
+    text-align: center;
+    line-height: 30px;
+}
+.qna_txt>strong{
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+/* ------------------------------------- */
+
+/* community_qna_question page */
+.field1, .field2{
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.field1>h2{
+    margin-bottom: 35px;
+}
+.field1>textarea{
+    width: 100%; height: 280px;
+    border: none;
+    outline: none;
+    padding: 40px;
+    line-height: 30px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+.field2{
+    text-align: center;
+}
+.field2>div{
+    display: flex;
+    height: 65px;
+    text-align: start;
+}
+.field2>div>p{
+    width: 290px;
+    padding: 10px 0;
+    font-weight: 500;
+    line-height: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+.field2>div>div{
+    width: calc(100% - 290px);
+    padding: 10px 30px 10px 20px;
+}
+.q_kind>select, .q_name>input, .q_shop>input{
+    width: 60%; height: 100%;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #e4e4e4;
+    outline: none;
+}
+.q_mail>input,.q_mail>select,.q_phone>input{
+    width: 20%; height: 100%;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #e4e4e4;
+    outline: none;
+}
+.q_mail>select{
+    margin-left: 10px;
+}
+.q_mail>span, .q_phone>span{
+    margin: 0 15px;
+}
+.q_tit>input, .q_txt>textarea{
+    width: 100%; height: 100%;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #e4e4e4;
+    outline: none;
+}
+.field2>div:nth-child(1)>p{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.field2>div:nth-child(7){
+    height: 280px;
+}
+.field2>div:nth-child(7)>p{
+    border-bottom: none;
+    line-height: 280px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.field2>input{
+    width: 160px; height: 43px;
+    background-color: #ed1c24;
+    box-shadow: inset 0px 5px 10px 0 rgba(53, 53, 53, 0.11);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+}
+/* ------------------------------------- */
+
+/* community_qna_notice page */
+.qna_table{
+    margin-bottom: 50px;
+}
+.qna_table_tit{
+    font-size: 35px;
+    text-align: center;
+    padding: 30px;
+}
+.qna_table{
+    width: 100%;
+    border-top: 2px solid #F05A21;
+    border-collapse: collapse;
+}
+.qna_table>thead>tr{
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+.qna_table>tbody>tr{
+    border-bottom: 1px solid #e1e1e1;
+}
+.qna_table td{
+    padding: 10px;
+    font-size: 18px;
+}
+.table_center{
+    text-align: center;
+}
+
+.table_pagination{
+    margin-bottom: 50px;
+}

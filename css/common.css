@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+dl, ul, ol, menu, li{
+    list-style:none;
+}
+input, select, textarea, button{
+    vertical-align:middle;
+}
+input:focus, button:focus, textarea:focus{
+    outline:none;
+}
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+body{
+    font-size: 13px;
+    font-family: 'noto', sans-serif;
+    font-weight: 400;
+    color: #010101;
+}
+a{
+    color:#010101;
+    text-decoration:none;
+}
+
+:root{
+    --point-color : #cf9456;
+    --black-color : #151414;
+    --white-color : #F8F8F8;
+    --bg-color : #F7F6F2;
+    --border-color : #D4D4D4;
+    --sub-lightgray : #5d5d5d;
+    
+    --px15-font : max(0.8rem, 0.8vw);
+    --px18-font : max(1rem, 1.1vw);
+    --px20-font : max(1.1rem, 1.1vw);
+    --px22-font : max(1.2rem, 1.2vw);
+    --px30-font : max(1.5rem, 2vw);
+}
